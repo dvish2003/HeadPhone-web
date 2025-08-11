@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.some-class {
+  color: #333;
+}
+/* 
+body {
+  font-family: 'Varela Round', sans-serif;
+} */
