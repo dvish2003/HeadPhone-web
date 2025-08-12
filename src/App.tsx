@@ -2,11 +2,13 @@ import { UpdateFollower } from 'react-mouse-follower'
 import './App.css'
 import Navbar from './components/NavBar/Navbar'
 import Hero from './components/Hero/Hero'
+import Service from './components/Services/Service'
+import Banner from './components/Banner/Banner'
 
 function App() {
 
   return (
-    <>
+    <main className='overflow-x-hidden'>
     <UpdateFollower mouseOptions={{
       backgroundColor: "white",
       zIndex: 999,
@@ -15,7 +17,9 @@ function App() {
       <Navbar/>
       <Hero/>
     </UpdateFollower>
-    </>
+    <Service/>
+    <Banner/>
+    </main>
   )
 }
 

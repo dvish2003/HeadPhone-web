@@ -1,4 +1,3 @@
-import { sub } from "framer-motion/client";
 import HeadPhone1 from "../../assets/headphone.png";
 import HeadPhone2 from "../../assets/headphone2.png";
 import HeadPhone3 from "../../assets/headphone3.png";
@@ -163,34 +162,31 @@ function Hero() {
                 return (
                   <UpdateFollower
                     mouseOptions={{
-                        backgroundColor: item.bgColor,
-                  zIndex: 9999,
-                  followSpeed: 0.5,
-                  scale: 6,
-text:"View Details",
-textFontSize: "3px",
+                      backgroundColor: item.bgColor,
+                      zIndex: 9999,
+                      followSpeed: 0.5,
+                      scale: 6,
+                      text: "View Details",
+                      textFontSize: "3px",
 
-                  mixBlendMode: "difference",
-                
-                    }}
-                  
+                      mixBlendMode: "difference",
+                      }}
                   >
-
                     <div
-                    key={item.id}
-                    onClick={() => handleHeadPhoneChange(item)}
-                    className="grid grid-cols-2 cursor-pointer place-items-center"
-                  >
-                    <div>
-                      <img src={item.image} alt="" className="w-[200px]" />
+                      key={item.id}
+                      onClick={() => handleHeadPhoneChange(item)}
+                      className="grid grid-cols-2 cursor-pointer place-items-center"
+                    >
+                      <div>
+                        <img src={item.image} alt="" className="w-[200px]" />
+                      </div>
+                      <div className="space-y-2">
+                        <p className="text-base font-bold">{item.price}</p>
+                        <p className="text-xs font-normal text-nowrap">
+                          {item.modal}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <p className="text-base font-bold">{item.price}</p>
-                      <p className="text-xs font-normal text-nowrap">
-                        {item.modal}
-                      </p>
-                    </div>
-                  </div>
                   </UpdateFollower>
                 );
               })}
@@ -205,9 +201,12 @@ textFontSize: "3px",
               initial={{ opacity: 0, scale: 0.9, y: 100 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              exit={{ opacity: 0, scale: 0.9, y: 100,
-                transition: { duration: 0.2,delay: 0.2}
-               }}
+              exit={{
+                opacity: 0,
+                scale: 0.9,
+                y: 100,
+                transition: { duration: 0.2, delay: 0.2 },
+              }}
               src={active.image}
               alt=""
               className="w-[300px] md:w-[400px] xl:w-[550px]"
